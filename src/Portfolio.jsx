@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Github,
   Mail,
   Download,
   ExternalLink,
@@ -54,16 +53,18 @@ const skills = [
 export default function Portfolio() {
   return (
     <main className="min-h-screen bg-slate-950 text-white overflow-hidden">
-      
+
       <div className="fixed inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(56,189,248,.25),transparent_35%),radial-gradient(circle_at_80%_10%,rgba(168,85,247,.25),transparent_30%),radial-gradient(circle_at_50%_90%,rgba(34,197,94,.18),transparent_35%)]" />
 
       <div className="fixed inset-0 bg-[linear-gradient(rgba(255,255,255,.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.04)_1px,transparent_1px)] bg-[size:60px_60px] opacity-30" />
 
       {/* HERO */}
       <section className="relative max-w-7xl mx-auto px-6 py-8">
-        
+
         <nav className="flex items-center justify-between mb-20">
+
           <div className="flex items-center gap-3">
+
             <div className="h-11 w-11 rounded-2xl bg-cyan-400/20 border border-cyan-300/30 flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,.35)]">
               <Sparkles className="h-5 w-5 text-cyan-300" />
             </div>
@@ -71,9 +72,11 @@ export default function Portfolio() {
             <span className="font-bold tracking-wide">
               SHARATH P
             </span>
+
           </div>
 
           <div className="hidden md:flex gap-6 text-sm text-slate-300">
+
             <a href="#projects" className="hover:text-cyan-300">
               Projects
             </a>
@@ -85,7 +88,9 @@ export default function Portfolio() {
             <a href="#contact" className="hover:text-cyan-300">
               Contact
             </a>
+
           </div>
+
         </nav>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[70vh]">
@@ -102,27 +107,33 @@ export default function Portfolio() {
             </div>
 
             <h1 className="text-5xl md:text-7xl font-black leading-tight tracking-tight">
+
               Turning Data Into{" "}
+
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400">
                 Business Decisions
               </span>
+
             </h1>
 
             <p className="mt-6 text-lg text-slate-300 max-w-xl leading-relaxed">
+
               MBA graduate transitioning into Data Analytics with
               hands-on projects in SQL, Python, Power BI,
               Tableau, Excel, and Machine Learning.
+
             </p>
 
             <div className="flex flex-wrap gap-4 mt-8">
 
               <button className="rounded-2xl px-6 py-4 bg-cyan-400 text-slate-950 hover:bg-cyan-300 shadow-[0_0_35px_rgba(34,211,238,.45)] font-semibold">
+
                 <Download className="inline mr-2 h-4 w-4" />
                 Download Resume
+
               </button>
 
               <button className="rounded-2xl px-6 py-4 border border-white/20 bg-white/5 hover:bg-white/10 font-semibold">
-                <Github className="inline mr-2 h-4 w-4" />
                 GitHub
               </button>
 
@@ -131,6 +142,7 @@ export default function Portfolio() {
               </button>
 
             </div>
+
           </motion.div>
 
           {/* RIGHT PANEL */}
@@ -149,6 +161,7 @@ export default function Portfolio() {
 
                 {["SQL", "Python", "Power BI", "Tableau", "Excel", "ML"].map(
                   (item, i) => (
+
                     <div
                       key={item}
                       className="rounded-3xl bg-slate-950/60 border border-white/10 p-5 min-h-28 flex flex-col justify-between hover:border-cyan-300/40 transition"
@@ -185,6 +198,7 @@ export default function Portfolio() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
 
           {skills.map((s) => (
+
             <div
               key={s.title}
               className="rounded-3xl border border-white/10 bg-white/10 backdrop-blur-xl hover:bg-white/[.14] transition p-6"
@@ -202,6 +216,7 @@ export default function Portfolio() {
 
             </div>
           ))}
+
         </div>
       </section>
 
@@ -218,6 +233,7 @@ export default function Portfolio() {
         <div className="grid lg:grid-cols-2 gap-7">
 
           {projects.map((p) => (
+
             <div
               key={p.title}
               className="group rounded-[2rem] border border-white/10 bg-white/10 backdrop-blur-2xl overflow-hidden hover:border-cyan-300/40 transition"
@@ -226,7 +242,9 @@ export default function Portfolio() {
               <div className="h-52 bg-gradient-to-br from-cyan-400/20 via-blue-500/20 to-purple-500/20 relative">
 
                 <div className="absolute inset-6 rounded-3xl border border-white/10 bg-slate-950/50 flex items-center justify-center">
+
                   <BarChart3 className="h-20 w-20 text-cyan-300 opacity-90 group-hover:scale-110 transition" />
+
                 </div>
               </div>
 
@@ -243,11 +261,14 @@ export default function Portfolio() {
                 <div className="flex flex-wrap gap-2 mb-5">
 
                   {p.tags.map((tag) => (
+
                     <span
                       key={tag}
                       className="px-3 py-1 rounded-full bg-cyan-300/10 text-cyan-200 border border-cyan-300/20 text-xs"
                     >
+
                       {tag}
+
                     </span>
                   ))}
 
@@ -256,24 +277,31 @@ export default function Portfolio() {
                 <div className="grid grid-cols-3 gap-3 mb-6">
 
                   {p.metrics.map((m) => (
+
                     <div
                       key={m}
                       className="rounded-2xl bg-slate-950/50 border border-white/10 p-3 text-xs text-slate-200 text-center"
                     >
+
                       {m}
+
                     </div>
                   ))}
 
                 </div>
 
                 <button className="rounded-2xl bg-white text-slate-950 hover:bg-cyan-200 px-5 py-3 font-semibold">
+
                   View Project
+
                   <ExternalLink className="inline ml-2 h-4 w-4" />
+
                 </button>
 
               </div>
             </div>
           ))}
+
         </div>
       </section>
 
@@ -290,25 +318,29 @@ export default function Portfolio() {
           </h2>
 
           <p className="text-slate-300 mb-8">
+
             Open to Data Analyst roles, dashboard projects,
             and analytics opportunities.
+
           </p>
 
           <div className="flex justify-center gap-4 flex-wrap">
 
             <button className="rounded-2xl bg-cyan-400 text-slate-950 hover:bg-cyan-300 px-5 py-3 font-semibold">
+
               <Mail className="inline mr-2 h-4 w-4" />
               Contact Me
+
             </button>
 
             <button className="rounded-2xl border border-white/20 bg-white/5 hover:bg-white/10 px-5 py-3 font-semibold">
-              <Github className="inline mr-2 h-4 w-4" />
               GitHub
             </button>
 
           </div>
         </div>
       </section>
+
     </main>
   );
 }
