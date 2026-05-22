@@ -64,7 +64,7 @@ export default function Portfolio() {
                 <Github className="inline mr-2 h-4 w-4" /> GitHub
               </button>
               <button className="rounded-2xl px-6 py-4 border border-white/20 bg-white/5 hover:bg-white/10 font-semibold">
-                <LinkedinIcon className="inline mr-2 h-4 w-4" /> LinkedIn
+                <LinkedIn className="inline mr-2 h-4 w-4" /> LinkedIn
               </button>
             </div>
           </motion.div>
